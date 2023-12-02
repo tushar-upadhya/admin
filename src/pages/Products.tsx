@@ -1,5 +1,11 @@
+import { Index } from "../components";
+
 const Products = () => {
-  return <div>Products</div>;
+  return (
+    <div>
+      <Index />
+    </div>
+  );
 };
 
 export default Products;

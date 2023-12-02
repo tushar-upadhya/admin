@@ -5,7 +5,7 @@ interface ICategoryItemProps {
 }
 
 const CategoryItem = ({ color, value, heading }: ICategoryItemProps) => (
-  <div className="category-item">
+  <div className="category_item">
     <h5>{heading}</h5>
     <div>
       <div

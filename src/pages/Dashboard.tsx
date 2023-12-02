@@ -1,8 +1,11 @@
-import Header from "../components/Header";
-import Widget from "../components/Widget";
-import Inventory from "../components/graph/Inventory";
-import RevenueChart from "../components/graph/RevenueChart";
-import Index from "../components/sidebar/Index";
+import {
+  Header,
+  Index,
+  Widget,
+  Inventory,
+  RevenueChart,
+  GenderRatio,
+} from "../components";
 
 const Dashboard = () => {
   return (
@@ -47,6 +50,10 @@ const Dashboard = () => {
         <section className="graph_container">
           <RevenueChart />
           <Inventory />
+        </section>
+
+        <section className="transaction_container">
+          <GenderRatio />
         </section>
       </main>
     </div>

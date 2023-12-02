@@ -1,19 +1,20 @@
 import CategoryItem from "./CategoryItem";
-
 import data from "../../json/data.json";
 
 const Inventory = () => {
   return (
     <div className="dashboard_categories">
       <h2>Inventory</h2>
-      {data.categories.map((i) => (
-        <CategoryItem
-          key={i.heading}
-          heading={i.heading}
-          value={i.value}
-          color={`hsl(${i.value * 4},${i.value}%,50%)`}
-        />
-      ))}
+      <div>
+        {data.categories.map(({ heading, value }) => (
+          <CategoryItem
+            key={heading}
+            heading={heading}
+            value={value}
+            color={`hsl(${value * 4}, 70%, 50%)`}
+          />
+        ))}
+      </div>
     </div>
   );
 };
