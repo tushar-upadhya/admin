@@ -24,11 +24,24 @@ import CommonPieCharts from "./common/common-charts/CommonPieChart";
 
 // table
 
-import TableHOC from "./table/TableHOC";
-import TableTopTransaction from "./table/TableTopTransaction";
+import CommonTableHOC from "./common/table/CommonTableHOC";
+import TableTopTransaction from "./common/table/TableTopTransaction";
+
+//  json
+
+import data from "../json/data.json";
+
+// utils
+
+// import columns from "../utils/Columns";
+// import Arr from "../utils/Arr";
+// import dataType from "../utils/dataType";
 
 export {
+  // columns,
   Header,
+  // dataType,
+  // Arr,
   Widget,
   Index,
   TableTopTransaction,
@@ -41,6 +54,7 @@ export {
   CommonDoughnutCharts,
   CommonLineCharts,
   CommonPieCharts,
-  TableHOC,
+  CommonTableHOC,
   GenderRatio,
+  data,
 };

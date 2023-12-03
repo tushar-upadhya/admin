@@ -17,25 +17,25 @@ const Sidebar = ({ location }: ISidebarProps) => {
       <CommonHeader title="Dashboard" />
       <ul>
         <Li
-          url="/admin/dashboard"
+          url="/"
           text="Dashboard"
           Icon={RiDashboardFill}
           location={location}
         />
         <Li
-          url="/admin/product"
+          url="/product"
           text="Product"
           Icon={RiShoppingBag3Fill}
           location={location}
         />
         <Li
-          url="/admin/customer"
+          url="/customer"
           text="Customer"
           Icon={IoIosPeople}
           location={location}
         />
         <Li
-          url="/admin/transaction"
+          url="/transaction"
           text="Transaction"
           Icon={AiFillFileText}
           location={location}

@@ -5,11 +5,14 @@ import {
   Inventory,
   RevenueChart,
   GenderRatio,
+  TableTopTransaction,
 } from "../components";
+
+import data from "../json/data.json";
 
 const Dashboard = () => {
   return (
-    <div className="adminContainer">
+    <div className="admin_container">
       <Index />
       <main className="dashboard">
         <Header />
@@ -54,6 +57,8 @@ const Dashboard = () => {
 
         <section className="transaction_container">
           <GenderRatio />
+
+          <TableTopTransaction data={data.transaction} />
         </section>
       </main>
     </div>
