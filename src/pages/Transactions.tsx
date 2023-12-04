@@ -1,8 +1,8 @@
 import { Index, CommonTableHOC } from "../components";
 import { Column } from "react-table";
 import { useState, useCallback } from "react";
-import { Link } from "react-router-dom";
-import { DataType } from "../utils/interfaces/interface";
+import { DataType } from "../interfaces/dataType";
+import { transactionsArr } from "../utils/util";
 
 const columns: Column<DataType>[] = [
   {
@@ -31,35 +31,8 @@ const columns: Column<DataType>[] = [
   },
 ];
 
-const arr: DataType[] = [
-  {
-    user: "Charas",
-    amount: 4500,
-    discount: 400,
-    quantity: 3,
-    status: <span className="red">Processing</span>,
-    action: <Link to="/admin/transaction/sajknaskd">Manage</Link>,
-  },
-  {
-    user: "Xavirors",
-    amount: 6999,
-    discount: 400,
-    status: <span className="green">Shipped</span>,
-    quantity: 6,
-    action: <Link to="/admin/transaction/sajknaskd">Manage</Link>,
-  },
-  {
-    user: "Xavirors",
-    amount: 6999,
-    discount: 400,
-    status: <span className="purple">Delivered</span>,
-    quantity: 6,
-    action: <Link to="/admin/transaction/sajknaskd">Manage</Link>,
-  },
-];
-
 const Transactions = () => {
-  const [data] = useState<DataType[]>(arr);
+  const [data] = useState<DataType[]>(transactionsArr);
 
   const TABLE = useCallback(
     CommonTableHOC<DataType>(
@@ -74,6 +47,7 @@ const Transactions = () => {
   return (
     <div className="admin_container">
       <Index />
+
       <main>{TABLE()}</main>
     </div>
   );

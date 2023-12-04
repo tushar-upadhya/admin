@@ -31,12 +31,6 @@ import TableTopTransaction from "./common/table/TableTopTransaction";
 
 import data from "../json/data.json";
 
-// utils
-
-// import columns from "../utils/Columns";
-// import Arr from "../utils/Arr";
-// import dataType from "../utils/dataType";
-
 export {
   // columns,
   Header,

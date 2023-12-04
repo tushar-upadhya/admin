@@ -2,24 +2,36 @@ import { Link } from "react-router-dom";
 
 import { FaTrash } from "react-icons/fa";
 
-const img = "https://randomuser.me/api/portraits/women/54.jpg";
-const img2 = "https://randomuser.me/api/portraits/women/50.jpg";
+import p1 from "../assets/productImage/product1.jpg";
+import p2 from "../assets/productImage/product2.jpg";
 
-const img3 =
-  "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8&w=1000&q=804";
-
-const img4 = "https://m.media-amazon.com/images/I/514T0SvwkHL._SL1500_.jpg";
+import u1 from "../assets/userImage/u1.jpg";
+import u2 from "../assets/userImage/u2.jpg";
 
 export const productsArr = [
   {
-    photo: <img src={img3} alt="Shoes" />,
+    photo: <img src={p1} alt="Shoes" />,
     name: "Puma Shoes Air Jordan Cook Nigga 2023",
     price: 690,
     stock: 3,
     action: <Link to="/admin/product/sajknaskd">Manage</Link>,
   },
   {
-    photo: <img src={img3} alt="Shoes" />,
+    photo: <img src={p2} alt="Shoes" />,
+    name: "Macbook",
+    price: 232223,
+    stock: 213,
+    action: <Link to="/admin/product/sdaskdnkasjdn">Manage</Link>,
+  },
+  {
+    photo: <img src={p2} alt="Shoes" />,
+    name: "Puma Shoes Air Jordan Cook Nigga 2023",
+    price: 690,
+    stock: 3,
+    action: <Link to="/admin/product/sajknaskd">Manage</Link>,
+  },
+  {
+    photo: <img src={p1} alt="Shoes" />,
     name: "Macbook",
     price: 232223,
     stock: 213,
@@ -54,14 +66,14 @@ export const transactionsArr = [
   },
 ];
 
-export const usersArr = [
+export const customersArr = [
   {
     avatar: (
       <img
         style={{
           borderRadius: "50%",
         }}
-        src={img}
+        src={u1}
         alt="Shoes"
       />
     ),
@@ -81,7 +93,7 @@ export const usersArr = [
         style={{
           borderRadius: "50%",
         }}
-        src={img2}
+        src={u2}
         alt="Shoes"
       />
     ),
