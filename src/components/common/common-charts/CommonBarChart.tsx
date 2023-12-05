@@ -14,6 +14,7 @@ import {
   Filler,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
+import { months } from "../../../utils/util";
 
 ChartJS.register(
   CategoryScale,
@@ -27,8 +28,6 @@ ChartJS.register(
   LineElement,
   Filler
 );
-
-const months = ["January", "February", "March", "April", "May", "June", "July"];
 
 interface IBarChartProps {
   horizontal?: boolean;

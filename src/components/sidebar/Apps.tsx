@@ -16,23 +16,18 @@ const Apps = ({ location }: IAppsProps) => {
       <CommonHeader title="Apps" />
       <ul>
         <Li
-          url="/admin/app/stopwatch"
+          url="/app/stopwatch"
           text="Stopwatch"
           Icon={FaStopwatch}
           location={location}
         />
         <Li
-          url="/admin/app/coupon"
+          url="/app/coupon"
           text="Coupon"
           Icon={RiCoupon3Fill}
           location={location}
         />
-        <Li
-          url="/admin/app/toss"
-          text="Toss"
-          Icon={FaGamepad}
-          location={location}
-        />
+        <Li url="/app/toss" text="Toss" Icon={FaGamepad} location={location} />
       </ul>
     </div>
   );

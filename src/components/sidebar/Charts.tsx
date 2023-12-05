@@ -14,20 +14,10 @@ const Charts = ({ location }: IChartsProps) => {
     <div>
       <CommonHeader title="Charts" />
       <ul>
+        <Li url="/chart/bar" text="Bar" Icon={FaChartBar} location={location} />
+        <Li url="/chart/pie" text="Pie" Icon={FaChartPie} location={location} />
         <Li
-          url="/admin/chart/bar"
-          text="Bar"
-          Icon={FaChartBar}
-          location={location}
-        />
-        <Li
-          url="/admin/chart/pie"
-          text="Pie"
-          Icon={FaChartPie}
-          location={location}
-        />
-        <Li
-          url="/admin/chart/line"
+          url="/chart/line"
           text="Line"
           Icon={FaChartLine}
           location={location}

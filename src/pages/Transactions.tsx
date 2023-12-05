@@ -1,35 +1,7 @@
 import { Index, CommonTableHOC } from "../components";
-import { Column } from "react-table";
 import { useState, useCallback } from "react";
 import { DataType } from "../interfaces/dataType";
-import { transactionsArr } from "../utils/util";
-
-const columns: Column<DataType>[] = [
-  {
-    Header: "Avatar",
-    accessor: "user",
-  },
-  {
-    Header: "Amount",
-    accessor: "amount",
-  },
-  {
-    Header: "Discount",
-    accessor: "discount",
-  },
-  {
-    Header: "Quantity",
-    accessor: "quantity",
-  },
-  {
-    Header: "Status",
-    accessor: "status",
-  },
-  {
-    Header: "Action",
-    accessor: "action",
-  },
-];
+import { columns, transactionsArr } from "../utils/util";
 
 const Transactions = () => {
   const [data] = useState<DataType[]>(transactionsArr);
@@ -38,7 +10,7 @@ const Transactions = () => {
     CommonTableHOC<DataType>(
       columns,
       data,
-      "dashboard-product-box",
+      "dashboard_product_box",
       "Transactions",
       true
     ),

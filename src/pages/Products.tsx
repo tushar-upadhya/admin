@@ -1,43 +1,19 @@
 import { useCallback } from "react";
 import { CommonTableHOC, Index } from "../components";
-import { Column } from "react-table";
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { FaPlus } from "react-icons/fa";
 import { DataType } from "../interfaces/dataType";
-import { productsArr } from "../utils/util";
-
-const columns: Column<DataType>[] = [
-  {
-    Header: "Photo",
-    accessor: "photo",
-  },
-  {
-    Header: "Name",
-    accessor: "name",
-  },
-  {
-    Header: "Price",
-    accessor: "price",
-  },
-  {
-    Header: "Stock",
-    accessor: "stock",
-  },
-  {
-    Header: "Action",
-    accessor: "action",
-  },
-];
+import { ProductColumns, productsArr } from "../utils/util";
 
 const Products = () => {
   const [data] = useState<DataType[]>(productsArr);
 
   const TABLE = useCallback(
     CommonTableHOC<DataType>(
-      columns,
+      ProductColumns,
       data,
       "dashboard_product_box",
       "Products",

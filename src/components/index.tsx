@@ -27,15 +27,10 @@ import CommonPieCharts from "./common/common-charts/CommonPieChart";
 import CommonTableHOC from "./common/table/CommonTableHOC";
 import TableTopTransaction from "./common/table/TableTopTransaction";
 
-//  json
-
-import data from "../json/data.json";
+import Loader from "./Loader";
 
 export {
-  // columns,
   Header,
-  // dataType,
-  // Arr,
   Widget,
   Index,
   TableTopTransaction,
@@ -50,5 +45,5 @@ export {
   CommonPieCharts,
   CommonTableHOC,
   GenderRatio,
-  data,
+  Loader,
 };

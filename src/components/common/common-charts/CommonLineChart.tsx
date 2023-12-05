@@ -27,8 +27,7 @@ ChartJS.register(
   Filler
 );
 import { Line } from "react-chartjs-2";
-
-const months = ["January", "February", "March", "April", "May", "June", "July"];
+import { months } from "../../../utils/util";
 
 interface ILineChartProps {
   data: number[];
