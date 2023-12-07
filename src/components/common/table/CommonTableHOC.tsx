@@ -10,6 +10,7 @@ import {
   useTable,
   TableOptions,
 } from "react-table";
+import CommonHeader from "../CommonHeader";
 
 function CommonTableHOC<T extends Object>(
   columns: Column<T>[],
@@ -43,7 +44,7 @@ function CommonTableHOC<T extends Object>(
 
     return (
       <div className={containerClassName}>
-        <h2 className="heading">{heading}</h2>
+        <CommonHeader title={heading} />
 
         <table className="table" {...getTableProps()}>
           <thead>

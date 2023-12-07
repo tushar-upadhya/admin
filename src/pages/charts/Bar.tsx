@@ -1,4 +1,4 @@
-import { Index, CommonBarCharts } from "../../components";
+import { Index, CommonBarCharts, CommonHeader } from "../../components";
 import { months } from "../../utils/util";
 
 const Bar = () => {
@@ -7,7 +7,8 @@ const Bar = () => {
       <Index />
 
       <main className="chart-container">
-        <h1>Bar Charts</h1>
+        <CommonHeader title="Bar Charts" />
+
         <section>
           <CommonBarCharts
             data_1={[200, 444, 343, 556, 778, 455, 990]}
@@ -17,7 +18,8 @@ const Bar = () => {
             bgColor_1={`hsl(260,50%,30%)`}
             bgColor_2={`hsl(360,90%,90%)`}
           />
-          <h2>Top Selling Products & Top Customers</h2>
+
+          <CommonHeader title="Top Selling Products & Top Customers" />
         </section>
         <section>
           <CommonBarCharts
@@ -32,7 +34,8 @@ const Bar = () => {
             bgColor_2=""
             labels={months}
           />
-          <h2>Orders throughout the year</h2>
+
+          <CommonHeader title="Orders throughout the year" />
         </section>
       </main>
     </div>

@@ -1,4 +1,4 @@
-import { Index } from "../../components";
+import { CommonHeader, Index } from "../../components";
 import { Link } from "react-router-dom";
 import { OrderItemType, OrderType } from "../../types/type";
 import { useState } from "react";
@@ -74,7 +74,7 @@ const TransactionManagement = () => {
             padding: "2rem",
           }}
         >
-          <h2>Order Items</h2>
+          <CommonHeader title="Order Items" />
 
           {order.orderItems.map((i) => (
             <ProductCard
@@ -89,7 +89,9 @@ const TransactionManagement = () => {
 
         <article className="shipping_info_card">
           <h1>Order Info</h1>
+
           <h5>User Info</h5>
+
           <p>Name: {name}</p>
           <p>
             Address: {`${address}, ${city}, ${state}, ${country} ${pinCode}`}

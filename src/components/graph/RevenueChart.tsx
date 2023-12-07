@@ -1,9 +1,10 @@
-import { CommonBarCharts } from "..";
+import { CommonBarCharts, CommonHeader } from "..";
 
 const RevenueChart = () => {
   return (
     <div className="revenue_chart">
-      <h2>Revenue & Transaction</h2>
+      <CommonHeader title="Revenue & Transaction" />
+
       <CommonBarCharts
         data_2={[300, 144, 433, 655, 237, 755, 190]}
         data_1={[200, 444, 343, 556, 778, 455, 990]}

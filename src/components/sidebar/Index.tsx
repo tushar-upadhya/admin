@@ -4,6 +4,7 @@ import Charts from "./Charts";
 import Sidebar from "./Sidebar";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { useEffect, useState } from "react";
+import { CommonHeader } from "..";
 
 const Index = () => {
   const location = useLocation();
@@ -47,7 +48,8 @@ const Index = () => {
             : {}
         }
       >
-        <h2>Logo.</h2>
+        <CommonHeader title="Logo." />
+
         <Sidebar location={location} />
         <Charts location={location} />
         <Apps location={location} />

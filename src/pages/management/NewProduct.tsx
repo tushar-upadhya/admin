@@ -1,4 +1,4 @@
-import { Index } from "../../components";
+import { CommonHeader, Index } from "../../components";
 
 import { useState, ChangeEvent } from "react";
 
@@ -27,7 +27,8 @@ const NewProduct = () => {
       <main className="product_management">
         <article>
           <form>
-            <h2>New Product</h2>
+            <CommonHeader title="New Product" />
+
             <div>
               <label>Name</label>
               <input

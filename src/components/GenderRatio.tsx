@@ -1,11 +1,11 @@
-import { CommonDoughnutCharts } from ".";
+import { CommonDoughnutCharts, CommonHeader } from ".";
 
 import { BiMaleFemale } from "react-icons/bi";
 
 const GenderRatio = () => {
   return (
     <div className="gender_chart">
-      <h2>Gender Ratio</h2>
+      <CommonHeader title="Gender Ratio" />
 
       <CommonDoughnutCharts
         labels={["Female", "Male"]}

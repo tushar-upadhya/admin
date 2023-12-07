@@ -11,6 +11,8 @@ import u2 from "../assets/userImage/u2.jpg";
 import { DataType } from "../interfaces/dataType";
 import { Column } from "react-table";
 
+// productsArr
+
 export const productsArr = [
   {
     photo: <img src={p1} alt="Shoes" />,
@@ -27,6 +29,8 @@ export const productsArr = [
     action: <Link to="/product/:id">Manage</Link>,
   },
 ];
+
+// transactionsArr
 
 export const transactionsArr = [
   {
@@ -54,6 +58,8 @@ export const transactionsArr = [
     action: <Link to="/transaction/:id/">Manage</Link>,
   },
 ];
+
+// customer array
 
 export const customersArr = [
   {
@@ -98,6 +104,8 @@ export const customersArr = [
   },
 ];
 
+// months
+
 export const months = [
   "January",
   "February",
@@ -107,6 +115,8 @@ export const months = [
   "June",
   "July",
 ];
+
+// columns
 
 export const columns: Column<DataType>[] = [
   {
@@ -135,6 +145,8 @@ export const columns: Column<DataType>[] = [
   },
 ];
 
+// product columns
+
 export const ProductColumns: Column<DataType>[] = [
   {
     Header: "Photo",
@@ -157,6 +169,8 @@ export const ProductColumns: Column<DataType>[] = [
     accessor: "action",
   },
 ];
+
+// customer Columns
 
 export const CustomerColumns: Column<DataType>[] = [
   {
@@ -184,3 +198,22 @@ export const CustomerColumns: Column<DataType>[] = [
     accessor: "action",
   },
 ];
+
+// all letter
+export const allLetters =
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+export const allNumbers = "1234567890";
+export const allSymbols = "!@#$%^&*()_+";
+
+// format time
+export const formatTime = (timeInSeconds: number) => {
+  const hours = Math.floor(timeInSeconds / 3600);
+  const minutes = Math.floor((timeInSeconds % 3600) / 60);
+  const seconds = timeInSeconds % 60;
+
+  const hoursInString = hours.toString().padStart(2, "0");
+  const minutesInString = minutes.toString().padStart(2, "0");
+  const secondsInString = seconds.toString().padStart(2, "0");
+
+  return `${hoursInString}:${minutesInString}:${secondsInString}`;
+};

@@ -7,8 +7,11 @@ const Header = () => {
   return (
     <div className="bar">
       <BsSearch />
+
       <input type="text" placeholder="Search " />
+
       <FaRegBell />
+
       <img src={userImage} alt="user" />
     </div>
   );

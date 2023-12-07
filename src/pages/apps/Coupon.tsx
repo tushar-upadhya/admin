@@ -1,10 +1,7 @@
-import { Index } from "../../components";
+import { CommonHeader, Index } from "../../components";
 
 import { FormEvent, useEffect, useState } from "react";
-
-const allLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-const allNumbers = "1234567890";
-const allSymbols = "!@#$%^&*()_+";
+import { allLetters, allNumbers, allSymbols } from "../../utils/util";
 
 const Coupon = () => {
   const [size, setSize] = useState<number>(8);
@@ -51,7 +48,8 @@ const Coupon = () => {
       {" "}
       <Index />
       <main className="dashboard_app_container">
-        <h1>Coupon</h1>
+        <CommonHeader title="Coupon" />
+
         <section>
           <form className="coupon_form" onSubmit={submitHandler}>
             <input

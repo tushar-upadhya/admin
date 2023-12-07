@@ -1,10 +1,12 @@
 import CategoryItem from "./CategoryItem";
 import data from "../../json/data.json";
+import { CommonHeader } from "..";
 
 const Inventory = () => {
   return (
     <div className="dashboard_categories">
-      <h2>Inventory</h2>
+      <CommonHeader title="Inventory" />
+
       <div>
         {data.categories.map(({ heading, value }) => (
           <CategoryItem

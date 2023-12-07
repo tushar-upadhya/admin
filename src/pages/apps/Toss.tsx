@@ -1,4 +1,4 @@
-import { Index } from "../../components";
+import { CommonHeader, Index } from "../../components";
 import { useState } from "react";
 
 const Toss = () => {
@@ -12,7 +12,8 @@ const Toss = () => {
     <div className="admin_container">
       <Index />
       <main className="dashboard_app_container">
-        <h1>Toss</h1>
+        <CommonHeader title="Toss" />
+
         <section>
           <article
             className="toss_coin"

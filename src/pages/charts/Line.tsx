@@ -1,4 +1,4 @@
-import { Index, CommonLineCharts } from "../../components";
+import { Index, CommonLineCharts, CommonHeader } from "../../components";
 import { months } from "../../utils/util";
 
 const Line = () => {
@@ -7,7 +7,8 @@ const Line = () => {
       <Index />
 
       <main className="chart_container">
-        <h1>Line Charts</h1>
+        <CommonHeader title="Line Charts" />
+
         <section>
           <CommonLineCharts
             data={[
@@ -18,7 +19,8 @@ const Line = () => {
             backgroundColor="rgba(53, 162, 255,0.5)"
             labels={months}
           />
-          <h2>Active Users</h2>
+
+          <CommonHeader title="Active Users" />
         </section>
         <section>
           <CommonLineCharts
@@ -28,7 +30,7 @@ const Line = () => {
             label="Products"
             labels={months}
           />
-          <h2>Total Products (SKU)</h2>
+          <CommonHeader title="Total Products (SKU)" />
         </section>
       </main>
     </div>
